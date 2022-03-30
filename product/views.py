@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Category, Product
-
+from django.db.models import Q
 
 def index(request):
-	categories = Category.objects.all()
+	categories = Category.objects.prefetch_related('product_set').all()
 
 	context = {
 		'categories': categories
@@ -33,13 +33,14 @@ def category_product(request, slug):
 
 	return render(request, "products.html", context)
 
-def product_detail(request, category_slug, product_slug):
-	category = get_object_or_404(Category, slug=category_slug)
+def product_detail(request, product_slug, category_slug):
 	product = get_object_or_404(Product, slug=product_slug)
-
+	category = get_object_or_404(Category, slug=category_slug)
+	similar_products = Category.objects.get(slug=category_slug).product_set.filter(~Q(slug=product_slug))
 	context = {
 		'product': product,
 		'category': category,
+    	'similar_products': similar_products,
 	}
 
 	return render(request, "product_detail.html", context)

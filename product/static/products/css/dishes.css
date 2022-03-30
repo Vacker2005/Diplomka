@@ -258,11 +258,22 @@ a.logo2 {
 
 	a.logo2 {
 		display: block;
-		position: absolute;
-		left: 50%;
-		top: 100px;
-		transform: translate(-50%);
+        position: fixed;
+        left: 50%;
+        top: 70px;
+        transform: translate(-50%);
+        z-index: 100;
+        background: #0E0E0E;
+        width: 100%;
+        padding: 20px;
 	}
+    a.logo2 img{
+        margin: 0 auto;
+        display: block;
+    }
+    div.gallery{
+        margin-top:155px;
+    }
 }
 
 /* INDEX */
@@ -629,19 +640,23 @@ div.posts-gallery div.posts-gallery__item:hover a div.posts-gallery__item__conte
 
 div.gallery {
     width: 90%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
     margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
 div.gallery div.gallery__card {
     position: relative;
-    width: 100%;
+    width: 32%;
     height: 400px;
     cursor: pointer;
+    overflow: hidden;
+
 }
 
 div.gallery div.gallery__card img {
@@ -686,13 +701,21 @@ div.gallery__card:hover img.gallery__card__picture {
     width: 90%;
     margin: 0 auto;
     padding-top: 150px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .grid-item {
-    margin: 15px 0;
-    padding: 0 15px;
+  /*  margin: 15px 0;
+    padding: 0 15px;*/
     width: 400px;
     height: 400px;
+}
+        
+.gallery-grid h1 {   
+    width: 100%;
+    color: #fff;
+    text-align: center;
 }
 
 .grid-item__inner {
@@ -722,6 +745,7 @@ div.gallery__card:hover img.gallery__card__picture {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .grid-item__content {
@@ -740,6 +764,7 @@ div.gallery__card:hover img.gallery__card__picture {
     display: block;
     transform: translateY(300px);
     transition: transform 0.4s ease;
+    text-align: center;
 }
 
 .grid-item__inner:hover .grid-item__content > h2 {
@@ -854,16 +879,19 @@ div.owl-carousel div.item div.carousel-item-content {
     transform: translate(-50%, -50%);
 }
 
-div.owl-carousel div.item div.carousel-item-content > h3 {
+/*div.owl-carousel div.item div.carousel-item-content > h3 {
     font-size: 40px;
-}
+}*/
 
 div.owl-carousel div.item div.carousel-item-content h3.product-title {
     color: #fabf00;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 div.owl-carousel div.item div.carousel-item-content h3.product-price {
     color: #ffffff;
+    text-align: center;
 }
 
 div.owl-carousel div.item div.carousel-item-content > h3 {
@@ -1072,7 +1100,10 @@ div.footer2 footer div#hide-content-4 button {
     color: #000;
     border: 0;
 }
-
+.owl-carousel .owl-item img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
 @media (max-width: 900px) {
     div.footer footer div.row div.col-4 {
         margin-left: 0px !important;
@@ -1099,5 +1130,18 @@ div.footer2 footer div#hide-content-4 button {
 
     div.footer2 {
         display: block;
+    }
+}
+@media (max-width: 1020px) {
+    div.gallery{
+        margin-top:165px;
+    }
+    div.gallery div.gallery__card {
+        width: 45%;
+    }
+}
+@media (max-width: 770px) {
+    div.gallery div.gallery__card {
+        width: 100%;
     }
 }

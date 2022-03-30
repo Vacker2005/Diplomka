@@ -8,14 +8,15 @@ class Category(models.Model):
 	name = models.CharField(max_length=30, verbose_name="Название")
 	image = models.ImageField(upload_to="c_img/", null=True, verbose_name="Изображение")
 
-	def __str__(self):
+	def _str_(self):
 		return f'{self.name}'
 
 	def get_absolute_url(self):
 		return reverse('category_page', kwargs = {'slug': self.slug})	
 
 	def save(self, *args, **kwargs):
-		self.slug = slugify(self.name)
+		if not self.slug:
+			self.slug = slugify(self.name)
 		return super().save(*args, **kwargs)
 	
 	class Meta:
@@ -29,15 +30,17 @@ class Product(models.Model):
 	price = models.DecimalField(max_digits=6, decimal_places=2, verbose_name="Цена")
 	category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
 	image = models.ImageField(upload_to="p_img/", null=True)
+	description = models.TextField(null=True)
 
-	def __str__(self):
+	def _str_(self):
 		return f'{self.name}'
 
 	def get_absolute_url(self):
-		return reverse('category_page', kwargs = {'slug': self.slug})	
+		return reverse('product_detail', kwargs = {'category_slug': self.category.slug, 'product_slug': self.slug})	
 
 	def save(self, *args, **kwargs):
-		self.slug = slugify(self.name)
+		if not self.slug:
+			self.slug = slugify(self.name)
 		return super().save(*args, **kwargs)
 	
 	class Meta:
