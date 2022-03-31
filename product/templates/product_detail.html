@@ -3,12 +3,10 @@
 
 {% block content %}
 	
-	<section class="sproduct my-5 pt-5">
-		<div class="row mt-5 gap-5 gx-5">
-			<div class="product-image col-lg-5 col-md-12 col-12">
-				<img src="{{ product.image.url }}" style="height: 600px;" alt="">
-			</div>
-			<div class="product-info col-lg-6 col-md-12 col-12 ms-5">
+	<section class="sproduct pt-5">
+		<div class="product-card">
+			<img src="{{ product.image.url }}" alt="">
+			<div class="product-info">
 				<h1 class="product-title">{{ category.name }} "{{ product.name }}"</h1>
 				<h2 class="product-price">${{ product.price }}</h2>
 				<button id="decrement" onclick="stepper(this)">-</button>

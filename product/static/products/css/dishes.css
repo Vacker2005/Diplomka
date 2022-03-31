@@ -776,76 +776,77 @@ div.gallery__card:hover img.gallery__card__picture {
 
 section.sproduct {
     width: 90%;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 
-section.sproduct div.row div.product-info {
+/*section.sproduct div.row div.product-info {
     margin-left: 55px;
-}
+}*/
 
-section.sproduct div.row div.product-info h1.product-title,
+section.sproduct div.product-info h1.product-title,
 div.related-comics h1 {
     color: #fff;
     font-size: 60px;
 }
 
-section.sproduct div.row div.product-info h2.product-price {
+section.sproduct div.product-info h2.product-price {
     color: #fff; 
 }
 
-section.sproduct div.row div.product-info input {
+section.sproduct div.product-info input {
     width: 140px;
+    min-width: 96px;
     height: 50px;
     text-align: center;
     margin: 0 0 0 0;
 }
 
-section.sproduct div.row div.product-info input::-webkit-outer-spin-button,
-section.sproduct div.row div.product-info input::-webkit-inner-spin-button {
+section.sproduct div.product-info input::-webkit-outer-spin-button,
+section.sproduct div.product-info input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-section.sproduct div.row div.product-info #increment {
+section.sproduct div.product-info #increment {
     margin: 0 20px 0 0;
 }
 
-section.sproduct div.row div.product-info input:focus {
+section.sproduct div.product-info input:focus {
     outline: none;
 }
 
-section.sproduct div.row div.product-info button.buy-btn {
-    width: 380px;
-    height: 50px;
+section.sproduct div.product-info button.buy-btn {
+    width: 340px;
+    height: 46px;
     border: 0;
     background: #fabf00;
 }
 
-section.sproduct div.row div.product-info div.text {
+section.sproduct div.product-info div.text {
     color: #fff;
     font-size: 18px;
 }
 
-section.sproduct div.row div.product-info div.text p {
+section.sproduct div.product-info div.text p {
     font-family: sans-serif;
 }
 
-section.sproduct div.row div.product-info button#decrement,
-section.sproduct div.row div.product-info button#increment {
+section.sproduct div.product-info button#decrement,
+section.sproduct div.product-info button#increment {
     background: none;
     border: none;
-    font-weight: 100;
+    font-weight: bold;
     color: gray;
     font-family: sans-serif;
     position: relative;
-    font-size: 17px;
+    font-size: 20px;
 }
 
-section.sproduct div.row div.product-info button#decrement {
+section.sproduct div.product-info button#decrement {
     left: 30px;
 }
 
-section.sproduct div.row div.product-info button#increment {
+section.sproduct div.product-info button#increment {
     right: 30px;
 }
 
@@ -905,77 +906,79 @@ div.owl-carousel div.item:hover div.carousel-item-content > h3 {
 }
 
 @media (max-width: 1200px) {
-    section.sproduct div.row div.product-image img {
+/*    section.sproduct div.product-image img {
         height: 500px !important
-    }
+    }*/
 
-    section.sproduct div.row div.product-info {
+    /*section.sproduct div.product-info {
         margin-left: 35px !important;
-    }
+    }*/
 
-    section.sproduct div.row div.product-info div.text {
+    section.sproduct div.product-info div.text {
         font-size: 15px;
     }
 
-    section.sproduct div.row div.product-info input {
+    section.sproduct div.product-info input {
         width: 100px;
     }
 
-    section.sproduct div.row div.product-info button.buy-btn {
+    section.sproduct div.product-info button.buy-btn {
         width: 300px;
     }
 }
 
 
 @media (max-width: 1100px) {
-    section.sproduct div.row div.product-image img {
+/*    section.sproduct div.row div.product-image img {
         height: 400px !important;
-    }
+        aspect-ratio: 1;
+        object-fit: cover;
+    }*/
 
-    section.sproduct div.row div.product-info {
+/*    section.sproduct div.row div.product-info {
         margin-left: 0px !important;
-    }
+    }*/
 
-    section.sproduct div.row div.product-info input {
+    section.sproduct div.product-info input {
         width: 80px;
     }
 
-    section.sproduct div.row div.product-info button.buy-btn {
+    section.sproduct div.product-info button.buy-btn {
         width: 250px;
     }
 }
 
 @media (max-width: 1000px) {
-    section.sproduct div.row div.product-image img {
+/*    section.sproduct div.row div.product-image img {
         position: relative;
         left: 50%;
         transform: translate(-50%);
         height: 600px !important;
         max-width: 100%;
         object-fit: cover;
-    }
+    }*/
 
-    section.sproduct div.row div.product-info {
+    section.sproduct div.product-info {
 
     }
 }
 
-@media (max-width: 620px) {
-   section.sproduct div.row div.product-image img {
+/*@media (max-width: 620px) {
+   section.sproduct div.product-image img {
        height: 400px !important;
    } 
-}
+}*/
 
 @media (max-width: 350px) {
-    section.sproduct div.row div.product-image img {
+ /*   section.sproduct div.product-image img {
         height: 300px !important;
-    }
+    }*/
 
-    section.sproduct div.row div.product-info input {
+/*    section.sproduct div.product-info input {
         width: 80px;
-    }
+    }*/
 
-    section.sproduct div.row div.product-info button.buy-btn {
+    section.sproduct div.product-info button.buy-btn {
         width: 150px;
     }
 }
@@ -1143,5 +1146,49 @@ div.footer2 footer div#hide-content-4 button {
 @media (max-width: 770px) {
     div.gallery div.gallery__card {
         width: 100%;
+    }
+}
+
+/*@media (max-width: 1270px) {
+    section.sproduct div.row div.product-image img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+    }
+}*/
+.product-card {
+    display: flex;
+    gap: 10px ;
+}
+.product-card img{
+    vertical-align: middle;
+    width: 45%;
+    object-fit: cover;
+}
+
+label.btn-menu {
+    margin-top: 15px;
+}
+
+@media (max-width: 960px){
+    .product-card{
+        flex-direction: column;
+    }
+    .product-card img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 454px){
+    section.sproduct div.product-info h1.product-title {
+        font-size: 2em;
+    }
+    section.sproduct div.product-info button.buy-btn{
+        margin-top: 10px;
+        width: 50%;
+    }
+    section.sproduct div.product-info input {
+        width: 50%;
+        margin-left: -10px;
     }
 }
