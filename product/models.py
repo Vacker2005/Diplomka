@@ -8,7 +8,7 @@ class Category(models.Model):
 	name = models.CharField(max_length=30, verbose_name="Название")
 	image = models.ImageField(upload_to="c_img/", null=True, verbose_name="Изображение")
 
-	def _str_(self):
+	def __str__(self):
 		return f'{self.name}'
 
 	def get_absolute_url(self):
@@ -32,7 +32,7 @@ class Product(models.Model):
 	image = models.ImageField(upload_to="p_img/", null=True)
 	description = models.TextField(null=True)
 
-	def _str_(self):
+	def __str__(self):
 		return f'{self.name}'
 
 	def get_absolute_url(self):
